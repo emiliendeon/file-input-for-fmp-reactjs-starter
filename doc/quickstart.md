@@ -16,15 +16,15 @@ If you want to use it with [S3 upload module](https://fast-modular-project.com/m
 
 ```typescript
 const addFiles = async event => {
-    let files = [...event.target.files];
-    for (const file of files) {
+    let selectedFiles = [...event.target.files];
+    for (const file of selectedFiles) {
         const s3Url = await uploadFile(file);
         file.s3Url = s3Url;
     }
     if (props.multiple) {
-        setFiles(prev => [...prev, ...files]);
+        setFiles(prev => [...prev, ...selectedFiles]);
     } else {
-        setFiles(files);
+        setFiles(selectedFiles);
     }
 };
 ```
