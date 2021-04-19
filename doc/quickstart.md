@@ -28,3 +28,17 @@ const addFiles = async event => {
     }
 };
 ```
+
+You can then use the `s3Url` attribute to show files in files list like this :
+
+```typescript
+<Files>
+    {files.map((file, index) => (
+        <a key={index} href={file.s3Url}>
+            <File>
+                {/* ... */}
+            </File>
+        </a>
+    ))}
+</Files>
+```
