@@ -8,7 +8,7 @@ Add `file.input.tsx` to your `frontend/src/components/forms` folder
 
 ### Step 3
 
-See [example/example.screen.tsx](https://github.com/emiliendeon/file-input-for-fmp-reactjs-starter/blob/main/example/example.screen.tsx) for usage
+See [example/example.screen.tsx](https://github.com/emiliendeon/file-input-for-fmp-reactjs-starter/blob/master/example/example.screen.tsx) for usage
 
 ### Step 4
 
