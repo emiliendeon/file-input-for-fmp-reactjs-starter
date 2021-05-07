@@ -140,7 +140,16 @@ export default (props: FileInputProps) => {
     return (
         <Wrapper style={props?.style}>
             <InputWrapper>
-                <Input type="file" multiple={props?.multiple} onChange={addFiles} />
+                <Input
+                    type="file"
+                    multiple={props?.multiple}
+                    onChange={addFiles}
+                    onClick={(e: any) => {
+                        if (!props.multiple) {
+                            e.target.value = null;
+                        }
+                    }}
+                />
                 {props.label ? <Label>{props.label}</Label> : null}
                 {files.length >= 1 ? (
                     <Files>
